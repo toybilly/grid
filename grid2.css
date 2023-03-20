@@ -8,8 +8,8 @@ main{
     background-color: antiquewhite;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15vw 70vw 15vw;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 100px;
 }
 
 header, nav, article, footer {
@@ -23,20 +23,28 @@ header, nav, article, footer {
 
 header {
     background-color: rgb(102, 102, 213);
-    grid-column: span 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
 
 nav {
     background-color: purple;
-    grid-column: 1 span;
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 article {
     background-color: aqua;
-    grid-column: 2 span;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 footer {
     background-color: gray;
-    grid-column: span 3;
-}
+    grid-column-start: 1;
+    grid-column-end: 13;
+    }
